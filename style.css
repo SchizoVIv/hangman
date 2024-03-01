@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: red 1px solid; */
+}
+
+.body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+    /* width: 100%; */
+    width: 70vw;
+    /* max-width: 700px; */
+    padding: 60px 40px;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+.hangman {
+}
+.hangman__image {
+    max-width: 269px;
+    margin: 0 20px 0 0;
+}
+.hangman__title {
+    font-size: 1.45rem;
+    text-align: center;
+    margin: 20px 0 0;
+}
+.result {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 1;
+    transition: all 1s;
+}
+.result_overfloy_hidden{
+    pointer-events: none;
+    opacity: 0;
+}
+.result__conteiner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.726);
+}
+.result__img {
+    max-width: 250px;
+}
+.result__text {
+    margin: 150px 0 0;
+    position: absolute;
+    font-size: 2.5rem;
+}
+.result__button {
+    margin: 20px 0 0;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(200, 227, 111);
+    transition: all .5s;
+}
+.result__button:hover {
+    background-color: rgb(227, 111, 144);
+}
+.game {
+}
+.game__word {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 25px;
+}
+.game__letter {
+    font-size: 1.5rem;
+    width: 30px;
+    border-bottom: 3px solid #000;
+    text-transform: uppercase;
+    text-align: center;
+}
+.game__letter_border_none {
+    border-bottom: none;
+}
+.game__letter_open {
+    border-color: transparent;
+}
+.game__title,
+.game__subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0 0 15px;
+}
+.game__riddle,
+.game__trying {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0 15px;
+}
+.game__subtitle {
+}
+.game__trying {
+}
+.keyboard {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 5px;
+}
+.kb {
+    font-size: 1rem;
+    padding: 5px 0;
+    width: calc(100% / 9 - 5px);
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: none;
+    transition: all 0.5s;
+}
+
+.kb_hover:hover {
+    background-color: rgb(225, 234, 163);
+}
+
+
+
+@media (max-width: 790px) {
+    .section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+    }    
+    .hangman__title {
+        display: none;
+        margin: 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .game__letter {
+        width: 20px;
+    }
+    .hangman__image {
+        margin: 0;
+    }
+}
